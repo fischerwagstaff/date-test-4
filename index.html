@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head?>
+<script>
+    // get a random number between 0 and 499
+    //
+    var randNum = Math.floor(Math.random() * 1);
+
+    // An array of URL's
+    var randURLs = [
+        "https://drive.google.com/file/d/1uDycw20zv_I8lHHs2TfMHX5bI42g2a8P/view?usp=drive_link",
+        "https://drive.google.com/file/d/1bfYhaGy3crqmxOXc61-eMK3GKUqedO5z/view?usp=drive_link",
+        "https://drive.google.com/file/d/1-XUScMPOHLR7x9XcH7OLDoszuRCr_PXS/view?usp=drive_link"
+    ];
+
+    // There was a 1 in 500 chance we generated a zero.
+    if (randNum == 0) {
+        // randURLs.length will tell us how many elements are
+        // in the randURLs array - we can use this to generate
+        // a random number between 0 and n (number of elements)
+        //
+        // In our case there are 3 elements in the array, 0, 1
+        // and 2. So we want to get another random number in
+        // the inclusive range 0 - 2
+        //
+        var randURL = Math.floor(Math.random() * randURLs.length);
+
+        window.open(randURLs[randURL]);
+    }
+</script>
+</html>
